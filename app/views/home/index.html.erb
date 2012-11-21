@@ -1,1 +1,6 @@
-	<%= link_to 'Authenticate this Facebook app', @auth_url, :class=>"button"%>
+Looping through your pictures:<br />
+
+<% @graph_data.each do |photo| %>
+<%= photo["id"] %> (<%=photo["created_time"]%>) <hr>
+<img src="<%= photo["source"]%>"/>
+<% end %>
