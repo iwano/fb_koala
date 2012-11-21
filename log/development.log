@@ -220,3 +220,9 @@ Started GET "/" for 127.0.0.1 at 2012-11-21 13:45:41 -0600
   Processing by HomeController#index as HTML
 Rendered home/index.html.erb within layouts/home (0.2ms)
 Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-21 13:49:52 -0600
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/home (0.2ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
