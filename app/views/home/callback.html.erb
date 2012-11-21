@@ -3,5 +3,6 @@ Looping through your pictures:<br />
 
 <% @graph_data.each do |photo| %>
 <%= photo["picture"] %> (<i><%=photo["source"]%></i>)<hr>
+<img src="<%= photo["source"]%>"/>
 <% end %>
 </ul>
