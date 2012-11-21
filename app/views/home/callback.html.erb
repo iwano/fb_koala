@@ -1,8 +1,6 @@
 Looping through your pictures:<br />
-<ul>
 
 <% @graph_data.each do |photo| %>
-<%= photo["id"] %> (<i><%=photo["id"]%></i>)<hr>
+<%= photo["id"] %> (<%=photo["created_time"]%>) <hr>
 <img src="<%= photo["source"]%>"/>
 <% end %>
-</ul>
