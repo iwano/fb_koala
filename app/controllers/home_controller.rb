@@ -3,7 +3,7 @@ class HomeController < ActionController::Base
   
    def index   
    	session[:oauth] = Koala::Facebook::OAuth.new(APP_ID, APP_SECRET, 'http://fb-koala-sample.herokuapp.com/home/callback')
-		@auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"read_stream") 	
+		@auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"user_photos") 	
 		puts session.to_s + "<<< session"
 
   	respond_to do |format|
@@ -21,7 +21,7 @@ class HomeController < ActionController::Base
 		  
 		@api = Koala::Facebook::API.new(session[:access_token])
 		begin
-			@graph_data = @api.get_object("/me/statuses", "fields"=>"message")
+			@graph_data = @api.get_photos("/me/pictures", "fields"=>"picture")
 		rescue Exception=>ex
 			puts ex.message
 		end
