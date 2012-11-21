@@ -21,7 +21,7 @@ class HomeController < ActionController::Base
 		  
 		@api = Koala::Facebook::API.new(session[:access_token])
 		begin
-			@graph_data = @api.get_connections("/me/photos", "fields"=>"photo")
+			@graph_data = @api.get_connections("1424188961843?fields=photos.fields(source,id)", "fields"=>"photo")
 		rescue Exception=>ex
 			puts ex.message
 		end
