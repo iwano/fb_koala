@@ -3,7 +3,7 @@ class HomeController < ActionController::Base
 
 	def index
 		@api = Koala::Facebook::API.new
-		@graph_data = @api.get_connections("10151326486988829", "photos")
+		@graph_data = @api.get_connections("10151330276113829", "photos")
 	end
 end
 
